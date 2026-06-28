@@ -1,48 +1,59 @@
-# 📊 Telco Customer Churn Prediction — End-to-End Machine Learning Pipeline
+# 📊 IBM Telco Customer Churn — Data Preparation & Preprocessing Pipeline
 
 ## Project Overview
 
-This project demonstrates an end-to-end Machine Learning workflow using the IBM Telco Customer Churn dataset. The primary objective is to build a production-style preprocessing pipeline and prepare high-quality data for customer churn prediction.
+This project demonstrates an end-to-end data preparation workflow for Machine Learning using the IBM Telco Customer Churn dataset.
 
-Rather than focusing only on model accuracy, this project emphasizes professional data preprocessing, feature engineering, and reproducible machine learning workflows commonly used by AI/ML Engineers.
+The primary objective was **not** to build the most accurate churn prediction model, but to master the complete data preparation pipeline that every AI/ML Engineer performs before training machine learning models.
 
----
-
-## Project Goals
-
-* Perform professional data understanding
-* Clean and validate raw business data
-* Conduct exploratory data analysis (EDA)
-* Engineer meaningful business features
-* Build reusable preprocessing pipelines
-* Prevent data leakage
-* Compare multiple machine learning models
-* Evaluate model performance using industry-standard metrics
+The project covers everything from understanding raw data to producing a fully preprocessed dataset ready for machine learning.
 
 ---
 
-## Project Structure
+## Objectives
+
+- Understand an unfamiliar dataset
+- Perform professional data cleaning
+- Handle missing values and incorrect data types
+- Perform Exploratory Data Analysis (EDA)
+- Engineer meaningful business-driven features
+- Build reusable preprocessing pipelines
+- Train and compare baseline machine learning models
+
+---
+
+## Dataset
+
+**IBM Telco Customer Churn Dataset**
+
+- 7,043 customer records
+- Customer demographics
+- Account information
+- Services subscribed
+- Billing information
+- Target Variable: **Churn**
+
+---
+
+# Project Structure
 
 ```
-Telco-Customer-Churn/
-
+Customer-Churn-Data-Preparation/
 │
 ├── data/
 │   ├── raw/
 │   │   └── Telco-Customer-Churn.csv
 │   │
 │   └── processed/
-│       └── feature_engineered_telco.csv
+│       └── telco_feature_engineered.csv
 │
 ├── notebooks/
-│   ├── 01_Data_Loading.ipynb
+│   ├── 01_Data_Understanding.ipynb
 │   ├── 02_Data_Cleaning.ipynb
-│   ├── 03_Exploratory_Data_Analysis.ipynb
+│   ├── 03_EDA.ipynb
 │   ├── 04_Feature_Engineering.ipynb
-│   ├── 05_Preprocessing_Pipeline.ipynb
-│   ├── 06_Model_Training.ipynb
-│   ├── 07_Model_Evaluation.ipynb
-│   └── 08_Final_Model.ipynb
+│   ├── 05_Preprocessing.ipynb
+│   └── 06_Baseline_Model.ipynb
 │
 ├── requirements.txt
 ├── README.md
@@ -51,138 +62,134 @@ Telco-Customer-Churn/
 
 ---
 
-# Dataset
+# Notebook Overview
 
-IBM Telco Customer Churn Dataset
+## 01 — Data Understanding
 
-Target Variable:
-
-* Churn
-
-Business Objective:
-
-Predict whether a customer is likely to leave the telecom company based on demographic information, subscription details, and service usage.
-
----
-
-# Completed Work
-
-## Notebook 01 — Data Loading
-
-* Imported dataset
-* Explored dataset structure
-* Verified data types
-* Identified target variable
+- Dataset inspection
+- Feature categorization
+- Target identification
+- Data types
+- Unique values
+- Initial business understanding
 
 ---
 
-## Notebook 02 — Data Cleaning
+## 02 — Data Cleaning
 
-* Checked missing values
-* Detected blank values
-* Fixed `TotalCharges`
-* Converted incorrect datatypes
-* Removed data inconsistencies
-* Generated professional Data Quality Summary
-
----
-
-## Notebook 03 — Exploratory Data Analysis
-
-Performed visual and statistical analysis for:
-
-* Customer demographics
-* Contract types
-* Internet services
-* Payment methods
-* Monthly charges
-* Tenure
-* Churn distribution
-* Correlation with churn
-
-Generated business insights after every visualization.
+- Missing value detection
+- Blank space handling
+- Data type correction
+- TotalCharges conversion
+- Duplicate checking
+- Data Quality Summary
 
 ---
 
-## Notebook 04 — Feature Engineering
+## 03 — Exploratory Data Analysis (EDA)
 
-Created meaningful business-driven features including:
-
-* TenureGroup
-* TotalServices
-* HasSecurityBundle
-* AverageMonthlySpend
-* IsFamilyCustomer
-
-Saved the engineered dataset for downstream preprocessing.
+- Target distribution
+- Numerical feature analysis
+- Categorical feature analysis
+- Churn analysis
+- Crosstab visualizations
+- Business insights
 
 ---
 
-## Notebook 05 — Machine Learning Preprocessing
+## 04 — Feature Engineering
 
-Implemented an industry-standard preprocessing workflow using Scikit-Learn.
+Created several business-driven features:
 
-Completed:
-
-* Train-Test Split
-* Stratified Sampling
-* Numerical & Categorical Feature Separation
-* StandardScaler
-* OneHotEncoder
-* ColumnTransformer
-* Scikit-Learn Pipeline
-* Baseline Logistic Regression Model
-
-Baseline Accuracy:
-
-**79.77%**
+- TenureGroup
+- TotalServices
+- HasSecurityBundle
+- AverageMonthlySpend
+- IsFamilyCustomer
 
 ---
 
-# Skills Demonstrated
+## 05 — Data Preprocessing
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-Learn
-* Data Cleaning
-* Exploratory Data Analysis
-* Feature Engineering
-* Feature Scaling
-* One-Hot Encoding
-* ColumnTransformer
-* Pipeline
-* Machine Learning Workflow
-* Data Leakage Prevention
+Built a reusable preprocessing pipeline using Scikit-learn.
+
+Includes:
+
+- Train/Test Split
+- StandardScaler
+- OneHotEncoder
+- ColumnTransformer
+- Pipeline
 
 ---
 
-# Technologies
+## 06 — Baseline Machine Learning Models
 
-* Python 3
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-Learn
-* Jupyter Notebook
+Compared multiple classification algorithms:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
+
+Evaluation Metrics:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
 
 ---
 
-# Upcoming Work
+# Technologies Used
 
-* Logistic Regression Optimization
-* Decision Tree
-* Random Forest
-* K-Nearest Neighbors
-* Support Vector Machine
-* Hyperparameter Tuning
-* Cross Validation
-* Model Comparison
-* ROC Curve
-* Precision-Recall Analysis
-* Feature Importance
-* Final Model Selection
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Jupyter Notebook
+
+---
+
+# Key Skills Demonstrated
+
+✔ Data Cleaning
+
+✔ Missing Value Handling
+
+✔ Data Type Conversion
+
+✔ Exploratory Data Analysis
+
+✔ Feature Engineering
+
+✔ Machine Learning Preprocessing
+
+✔ One-Hot Encoding
+
+✔ Feature Scaling
+
+✔ Pipeline Construction
+
+✔ Baseline Model Evaluation
+
+---
+
+# Results
+
+The project successfully transformed raw customer data into a machine-learning-ready dataset and compared multiple baseline classification models.
+
+Among the evaluated models, **Logistic Regression** achieved the strongest overall baseline performance on this dataset.
+
+---
+
+# Learning Outcome
+
+This project strengthened my understanding of the complete data preparation workflow used in real-world Machine Learning projects.
+
+Rather than focusing solely on model accuracy, the project emphasizes the importance of high-quality data preprocessing, feature engineering, and reproducible machine learning pipelines.
 
 ---
 
@@ -190,6 +197,4 @@ Baseline Accuracy:
 
 **Hasnain Ali**
 
-AI/ML Engineering Portfolio Project
-
-Built as part of my journey to becoming an AI/ML Engineer through hands-on, production-style machine learning projects.
+AI / ML Engineer Learning Journey
