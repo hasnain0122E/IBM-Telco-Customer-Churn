@@ -1,245 +1,195 @@
-# 📊 Telco Customer Churn Prediction | End-to-End Machine Learning Project
+# 📊 Telco Customer Churn Prediction — End-to-End Machine Learning Pipeline
 
-An end-to-end Machine Learning project built using the **IBM Telco Customer Churn Dataset**. This project demonstrates the complete machine learning workflow followed by AI/ML Engineers, from understanding raw data to building production-ready preprocessing pipelines and predictive models.
+## Project Overview
 
-The primary objective is to predict whether a customer is likely to churn while following industry-standard practices for data cleaning, feature engineering, preprocessing, model development, and evaluation.
+This project demonstrates an end-to-end Machine Learning workflow using the IBM Telco Customer Churn dataset. The primary objective is to build a production-style preprocessing pipeline and prepare high-quality data for customer churn prediction.
 
----
-
-# 🎯 Project Objectives
-
-- Perform professional data understanding and exploration
-- Clean and preprocess raw business data
-- Conduct Exploratory Data Analysis (EDA)
-- Engineer meaningful features from domain knowledge
-- Build reusable preprocessing pipelines using Scikit-learn
-- Train and compare multiple Machine Learning models
-- Evaluate models using appropriate performance metrics
-- Optimize the final model through hyperparameter tuning
+Rather than focusing only on model accuracy, this project emphasizes professional data preprocessing, feature engineering, and reproducible machine learning workflows commonly used by AI/ML Engineers.
 
 ---
 
-# 📁 Dataset Information
+## Project Goals
 
-**Dataset:** IBM Telco Customer Churn Dataset
-
-**Source:** Kaggle / IBM Sample Dataset
-
-### Target Variable
-
-- **Churn**
-  - Yes → Customer left the company
-  - No → Customer stayed
-
-### Dataset Summary
-
-| Property | Value |
-|----------|------:|
-| Total Customers | 7,043 |
-| Original Features | 21 |
-| Target Variable | Churn |
+* Perform professional data understanding
+* Clean and validate raw business data
+* Conduct exploratory data analysis (EDA)
+* Engineer meaningful business features
+* Build reusable preprocessing pipelines
+* Prevent data leakage
+* Compare multiple machine learning models
+* Evaluate model performance using industry-standard metrics
 
 ---
 
-# 🛠 Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-Learn
-- Jupyter Notebook
-
----
-
-# 📂 Project Structure
+## Project Structure
 
 ```
-Customer-Churn-Prediction/
+Telco-Customer-Churn/
+
 │
 ├── data/
 │   ├── raw/
-│   │   └── telco_customer_churn.csv
+│   │   └── Telco-Customer-Churn.csv
 │   │
-│   ├── cleaned/
-│   │   └── telco_cleaned.csv
-│   │
-│   └── featured/
-│       └── telco_feature_engineered.csv
+│   └── processed/
+│       └── feature_engineered_telco.csv
 │
 ├── notebooks/
-│   ├── 01_Data_Understanding.ipynb
+│   ├── 01_Data_Loading.ipynb
 │   ├── 02_Data_Cleaning.ipynb
 │   ├── 03_Exploratory_Data_Analysis.ipynb
 │   ├── 04_Feature_Engineering.ipynb
-│   ├── 05_Preprocessing.ipynb
+│   ├── 05_Preprocessing_Pipeline.ipynb
 │   ├── 06_Model_Training.ipynb
 │   ├── 07_Model_Evaluation.ipynb
-│   └── 08_Model_Optimization.ipynb
+│   └── 08_Final_Model.ipynb
 │
-├── README.md
 ├── requirements.txt
+├── README.md
 └── .gitignore
 ```
 
 ---
 
-# 🚀 Project Workflow
+# Dataset
 
-## ✅ 1. Data Understanding
+IBM Telco Customer Churn Dataset
 
-- Dataset overview
-- Data types inspection
-- Feature categorization
-- Target variable identification
-- Missing value inspection
-- Business understanding
+Target Variable:
 
----
+* Churn
 
-## ✅ 2. Data Cleaning
+Business Objective:
 
-- Removed invalid records
-- Corrected data types
-- Converted `TotalCharges` to numeric
-- Handled missing values
-- Created Data Quality Summary
+Predict whether a customer is likely to leave the telecom company based on demographic information, subscription details, and service usage.
 
 ---
 
-## ✅ 3. Exploratory Data Analysis (EDA)
+# Completed Work
 
-### Univariate Analysis
+## Notebook 01 — Data Loading
 
-- Target distribution
-- Numerical distributions
-- Categorical distributions
-
-### Bivariate Analysis
-
-- Tenure vs Churn
-- Contract Type vs Churn
-- Payment Method vs Churn
-- Internet Service vs Churn
-- Monthly Charges vs Churn
-- Total Charges vs Churn
-
-### Business Insights
-
-- Identified high-risk customer groups
-- Observed churn behavior across service categories
-- Analyzed customer retention patterns
+* Imported dataset
+* Explored dataset structure
+* Verified data types
+* Identified target variable
 
 ---
 
-## ✅ 4. Feature Engineering
+## Notebook 02 — Data Cleaning
 
-The following features were engineered to improve predictive performance:
-
-| Feature | Description |
-|----------|-------------|
-| TenureGroup | Groups customers based on subscription duration |
-| TotalServices | Total number of subscribed services |
-| HasSecurityBundle | Number of security-related services |
-| AverageMonthlySpend | TotalCharges divided by tenure |
-| IsFamilyCustomer | Indicates whether customer has partner or dependents |
+* Checked missing values
+* Detected blank values
+* Fixed `TotalCharges`
+* Converted incorrect datatypes
+* Removed data inconsistencies
+* Generated professional Data Quality Summary
 
 ---
 
-## ⏳ 5. Data Preprocessing *(In Progress)*
+## Notebook 03 — Exploratory Data Analysis
 
-Planned topics:
+Performed visual and statistical analysis for:
 
-- Train-Test Split
-- One-Hot Encoding
-- Feature Scaling
-- ColumnTransformer
-- Scikit-Learn Pipelines
-- Data Leakage Prevention
+* Customer demographics
+* Contract types
+* Internet services
+* Payment methods
+* Monthly charges
+* Tenure
+* Churn distribution
+* Correlation with churn
 
----
-
-## ⏳ 6. Model Training
-
-Models to be implemented:
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Support Vector Machine
-- K-Nearest Neighbors
-- XGBoost
+Generated business insights after every visualization.
 
 ---
 
-## ⏳ 7. Model Evaluation
+## Notebook 04 — Feature Engineering
 
-Evaluation metrics:
+Created meaningful business-driven features including:
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Confusion Matrix
-- Classification Report
+* TenureGroup
+* TotalServices
+* HasSecurityBundle
+* AverageMonthlySpend
+* IsFamilyCustomer
 
----
-
-## ⏳ 8. Model Optimization
-
-- Hyperparameter Tuning
-- Cross Validation
-- Feature Importance Analysis
-- Model Comparison
+Saved the engineered dataset for downstream preprocessing.
 
 ---
 
-# 📈 Current Progress
+## Notebook 05 — Machine Learning Preprocessing
 
-| Stage | Status |
-|--------|--------|
-| Data Understanding | ✅ Completed |
-| Data Cleaning | ✅ Completed |
-| Exploratory Data Analysis | ✅ Completed |
-| Feature Engineering | ✅ Completed |
-| Data Preprocessing | ⏳ In Progress |
-| Model Training | ⏳ Pending |
-| Model Evaluation | ⏳ Pending |
-| Model Optimization | ⏳ Pending |
+Implemented an industry-standard preprocessing workflow using Scikit-Learn.
 
----
+Completed:
 
-# 🎯 Learning Outcomes
+* Train-Test Split
+* Stratified Sampling
+* Numerical & Categorical Feature Separation
+* StandardScaler
+* OneHotEncoder
+* ColumnTransformer
+* Scikit-Learn Pipeline
+* Baseline Logistic Regression Model
 
-This project demonstrates practical skills in:
+Baseline Accuracy:
 
-- Data Cleaning
-- Exploratory Data Analysis
-- Feature Engineering
-- Feature Transformation
-- Machine Learning Preprocessing
-- Scikit-Learn Pipelines
-- Model Development
-- Model Evaluation
-- End-to-End ML Workflow
+**79.77%**
 
 ---
 
-# 📌 Future Improvements
+# Skills Demonstrated
 
-- Deploy model using Flask/FastAPI
-- Create an interactive Streamlit dashboard
-- Build a REST API for predictions
-- Containerize application using Docker
-- Deploy to Render or Azure
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-Learn
+* Data Cleaning
+* Exploratory Data Analysis
+* Feature Engineering
+* Feature Scaling
+* One-Hot Encoding
+* ColumnTransformer
+* Pipeline
+* Machine Learning Workflow
+* Data Leakage Prevention
 
 ---
 
-# 🤝 Connect With Me
+# Technologies
+
+* Python 3
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-Learn
+* Jupyter Notebook
+
+---
+
+# Upcoming Work
+
+* Logistic Regression Optimization
+* Decision Tree
+* Random Forest
+* K-Nearest Neighbors
+* Support Vector Machine
+* Hyperparameter Tuning
+* Cross Validation
+* Model Comparison
+* ROC Curve
+* Precision-Recall Analysis
+* Feature Importance
+* Final Model Selection
+
+---
+
+## Author
 
 **Hasnain Ali**
 
-Aspiring AI/ML Engineer passionate about building real-world Machine Learning solutions and continuously improving through hands-on projects.
+AI/ML Engineering Portfolio Project
 
-If you found this project useful, feel free to ⭐ the repository and connect with me on LinkedIn.
+Built as part of my journey to becoming an AI/ML Engineer through hands-on, production-style machine learning projects.
